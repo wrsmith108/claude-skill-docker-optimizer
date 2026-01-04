@@ -1,0 +1,33 @@
+{
+  "name": "@wrsmith108/claude-skill-docker-optimizer",
+  "version": "1.0.0",
+  "description": "Claude Code skill for analyzing and optimizing Dockerfiles for faster builds and smaller images",
+  "keywords": [
+    "claude-code",
+    "claude-skill",
+    "docker",
+    "dockerfile",
+    "optimization",
+    "container",
+    "devops",
+    "developer-tools"
+  ],
+  "author": "wrsmith108",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wrsmith108/claude-skill-docker-optimizer.git"
+  },
+  "main": "scripts/index.ts",
+  "scripts": {
+    "analyze": "npx tsx scripts/index.ts",
+    "analyze:json": "npx tsx scripts/index.ts --json"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}
