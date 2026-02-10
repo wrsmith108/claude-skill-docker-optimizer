@@ -5,12 +5,12 @@
  * Analyzes Dockerfiles for optimization opportunities.
  *
  * Usage:
- *   npx tsx ~/.claude/skills/docker-optimizer/scripts/index.ts [dockerfile-path] [--json]
+ *   npx tsx scripts/index.ts [dockerfile-path] [--json]
  *
  * Examples:
- *   npx tsx ~/.claude/skills/docker-optimizer/scripts/index.ts
- *   npx tsx ~/.claude/skills/docker-optimizer/scripts/index.ts ./Dockerfile
- *   npx tsx ~/.claude/skills/docker-optimizer/scripts/index.ts /path/to/Dockerfile --json
+ *   npx tsx scripts/index.ts
+ *   npx tsx scripts/index.ts ./Dockerfile
+ *   npx tsx scripts/index.ts /path/to/Dockerfile --json
  */
 
 import * as fs from 'fs';
@@ -51,7 +51,7 @@ function printHelp(): void {
 Docker Optimizer - Analyze and optimize Dockerfiles
 
 Usage:
-  npx tsx ~/.claude/skills/docker-optimizer/scripts/index.ts [dockerfile-path] [options]
+  npx tsx scripts/index.ts [dockerfile-path] [options]
 
 Arguments:
   dockerfile-path    Path to Dockerfile (default: ./Dockerfile)
@@ -61,9 +61,9 @@ Options:
   --help, -h        Show this help message
 
 Examples:
-  npx tsx ~/.claude/skills/docker-optimizer/scripts/index.ts
-  npx tsx ~/.claude/skills/docker-optimizer/scripts/index.ts ./Dockerfile
-  npx tsx ~/.claude/skills/docker-optimizer/scripts/index.ts /path/to/Dockerfile --json
+  npx tsx scripts/index.ts
+  npx tsx scripts/index.ts ./Dockerfile
+  npx tsx scripts/index.ts /path/to/Dockerfile --json
 
 Optimization Checks:
   - Layer order (COPY package.json before npm install)
@@ -105,7 +105,7 @@ async function main(): Promise<void> {
   if (!fs.existsSync(dockerfilePath)) {
     console.error(`Error: Dockerfile not found at ${dockerfilePath}`);
     console.error('');
-    console.error('Usage: npx tsx ~/.claude/skills/docker-optimizer/scripts/index.ts [dockerfile-path]');
+    console.error('Usage: npx tsx scripts/index.ts [dockerfile-path]');
     process.exit(1);
   }
 

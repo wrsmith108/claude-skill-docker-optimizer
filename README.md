@@ -14,7 +14,7 @@ git clone https://github.com/wrsmith108/claude-skill-docker-optimizer.git ~/.cla
 ### Standalone Usage
 
 ```bash
-npx tsx ~/.claude/skills/docker-optimizer/scripts/index.ts [dockerfile-path] [options]
+npx tsx scripts/index.ts [dockerfile-path] [options]
 ```
 
 ## Trigger Phrases
