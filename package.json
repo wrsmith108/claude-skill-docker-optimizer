@@ -1,6 +1,6 @@
 {
   "name": "@wrsmith108/claude-skill-docker-optimizer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Claude Code skill for analyzing and optimizing Dockerfiles for faster builds and smaller images",
   "keywords": [
     "claude-code",
